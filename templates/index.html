@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="p-4 p-md-5 mb-4 bg-light rounded-3 border">
+    <div class="container-fluid py-3">
+        <h1 class="display-6 fw-bold">Student Course Registration App</h1>
+        <p class="col-md-9 fs-5">
+            The Flask project is set up and connected to a normalized SQLite database structure.
+            Day 1 focuses on the foundation, so the navigation links are placeholders for the
+            CRUD features coming next.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary" href="#">Students</a>
+            <a class="btn btn-outline-primary" href="#">Courses</a>
+            <a class="btn btn-outline-primary" href="#">Enrollments</a>
+            <a class="btn btn-outline-primary" href="#">Dashboard</a>
+        </div>
+    </div>
+</div>
+
+<section>
+    <h2 class="h4">Day 1 Status</h2>
+    <p>
+        The project currently includes the Flask application entry point, SQLAlchemy models,
+        starter templates, a stylesheet, and draft documentation for normalization and setup.
+    </p>
+</section>
+{% endblock %}
