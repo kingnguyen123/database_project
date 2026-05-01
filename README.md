@@ -1,4 +1,4 @@
-# Student Course Registration App
+
 
 ## Project Description
 This project is a simple database web application built for a college assignment. It allows a user to manage students, courses, and enrollments using a relational database and a Flask web interface.
