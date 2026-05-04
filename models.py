@@ -36,6 +36,9 @@ class Course(db.Model):
 
 class Enrollment(db.Model):
     __tablename__ = "enrollments"
+    __table_args__ = (
+        db.UniqueConstraint("student_id", "course_id", name="uq_enrollment_student_course"),
+    )
 
     enrollment_id = db.Column(db.Integer, primary_key=True)
     student_id = db.Column(db.Integer, db.ForeignKey("students.student_id"), nullable=False)

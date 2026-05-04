@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-card">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="h2 mb-1">{{ form_title }}</h1>
+            <p class="text-muted mb-0">Fill in all required student details before saving.</p>
+        </div>
+        <a class="btn btn-outline-secondary" href="{{ url_for('students') }}">Back to Students</a>
+    </div>
+
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label" for="name">Name</label>
+            <input
+                class="form-control"
+                id="name"
+                name="name"
+                type="text"
+                value="{{ form_data.get('name', '') }}"
+                required
+            >
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input
+                class="form-control"
+                id="email"
+                name="email"
+                type="email"
+                value="{{ form_data.get('email', '') }}"
+                required
+            >
+        </div>
+        <div class="mb-4">
+            <label class="form-label" for="major">Major</label>
+            <input
+                class="form-control"
+                id="major"
+                name="major"
+                type="text"
+                value="{{ form_data.get('major', '') }}"
+                required
+            >
+        </div>
+        <button class="btn btn-primary" type="submit">{{ submit_label }}</button>
+    </form>
+</div>
+{% endblock %}

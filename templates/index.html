@@ -1,28 +1,42 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="p-4 p-md-5 mb-4 bg-light rounded-3 border">
-    <div class="container-fluid py-3">
+<div class="p-4 p-md-5 mb-4 bg-white rounded-3 border shadow-sm">
+    <div class="container-fluid py-2">
         <h1 class="display-6 fw-bold">Student Course Registration App</h1>
-        <p class="col-md-9 fs-5">
-            The Flask project is set up and connected to a normalized SQLite database structure.
-            Day 1 focuses on the foundation, so the navigation links are placeholders for the
-            CRUD features coming next.
+        <p class="col-md-9 fs-5 mb-4">
+            Day 1 is focused on the core setup for the project. Students and courses can now be
+            managed through full CRUD pages, while enrollments and the dashboard are planned for
+            tomorrow's work session.
         </p>
         <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-primary" href="#">Students</a>
-            <a class="btn btn-outline-primary" href="#">Courses</a>
-            <a class="btn btn-outline-primary" href="#">Enrollments</a>
-            <a class="btn btn-outline-primary" href="#">Dashboard</a>
+            <a class="btn btn-primary" href="{{ url_for('students') }}">Manage Students</a>
+            <a class="btn btn-outline-primary" href="{{ url_for('courses') }}">Manage Courses</a>
         </div>
     </div>
 </div>
 
-<section>
-    <h2 class="h4">Day 1 Status</h2>
-    <p>
-        The project currently includes the Flask application entry point, SQLAlchemy models,
-        starter templates, a stylesheet, and draft documentation for normalization and setup.
-    </p>
+<section class="row g-4">
+    <div class="col-md-6">
+        <div class="info-card h-100">
+            <h2 class="h4">Finished Today</h2>
+            <ul class="mb-0">
+                <li>Student CRUD pages with server-side validation</li>
+                <li>Course CRUD pages with server-side validation</li>
+                <li>Working navigation and flash messages</li>
+                <li>Updated Day 1 documentation</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="info-card h-100">
+            <h2 class="h4">Coming Tomorrow</h2>
+            <ul class="mb-0">
+                <li>Enrollment relationship management</li>
+                <li>Transaction logic for course registration</li>
+                <li>Dashboard with aggregate statistics</li>
+            </ul>
+        </div>
+    </div>
 </section>
 {% endblock %}

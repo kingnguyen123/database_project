@@ -37,6 +37,7 @@ python app.py
 ```
 
 When the application starts, it will automatically create the database file at `instance/app.db` if it does not already exist.
+If you change the schema during development and need a fresh database, delete `instance/app.db` and run the app again.
 
 ## Usage
 1. Start the Flask server:
@@ -44,11 +45,15 @@ When the application starts, it will automatically create the database file at `
    python app.py
    ```
 2. Open the local server address shown in the terminal.
-3. Use the homepage navigation to access students, courses, enrollments, and the dashboard as those features are added.
+3. Use the homepage navigation to manage students and courses.
+4. Enrollment management and the summary dashboard are planned for the next project session.
 
 ## Current Day 1 Progress
 - Flask app is set up
 - SQLite configuration is connected
 - SQLAlchemy models are created
-- Starter templates and styling are added
+- Student CRUD pages are complete
+- Course CRUD pages are complete
+- Server-side validation and flash messages are working
+- Navigation, starter templates, and styling are added
 - Documentation drafts are included

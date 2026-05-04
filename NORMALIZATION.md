@@ -47,5 +47,6 @@ The Python application will use the following schema:
   - `student_id` foreign key
   - `course_id` foreign key
   - `enroll_date`
+  - unique combination of `student_id` and `course_id`
 
 The final structure is in 3rd Normal Form because student facts depend only on the student key, course facts depend only on the course key, and enrollment facts depend only on the enrollment record.
